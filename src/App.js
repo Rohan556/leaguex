@@ -135,17 +135,19 @@ function App() {
       <Route exact path="/" element={<div className="App">
               <header className="App-header">
               <Header displayData={displayData} />
-              <Grid container spacing={2}>
+              {/* <div className='container'> */}
+                <div className='row'>
               {
                 displayData ? Object.keys(displayData.playersOnCategory).map((role) => {
                   return (
-                    <Grid item xs={6} md={6} key={role}>
+                    <div className='col-xs-12 col-md-6' key={role}>
                       <PlayersTable minRequirement={restrictions[role].min} maxRequirement={restrictions[role].max} role={role} players={displayData.playersOnCategory[role]} handleSelect={handleSelect} viewPage={false}/>
-                    </Grid>
+                    </div>
                   )
                 }): null
               }
-              </Grid>
+                </div>
+              {/* </div> */}
               <Typography style={{textAlign: "center"}}>
                 <Button style={{width: "60%", background: "green", color: "white", margin: "3% 0"}} onClick={() => handleSubmit()}>Proceed</Button>
               </Typography>
