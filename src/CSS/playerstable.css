@@ -1,0 +1,18 @@
+.players-table, .players-col, .players-row{
+    width: 100%;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+.players-col{
+    height: 20px;
+    font-weight: 400;
+}
+
+.players-row:hover{
+    cursor: pointer;
+}
+
+img{
+    height: 24px;
+}
